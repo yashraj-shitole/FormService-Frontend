@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginOwner } from '../api/ownerService';
 
@@ -47,7 +47,7 @@ const Login = () => {
     <div className="card max-w-full md:max-w-md mx-auto my-8 md:my-16 rounded-lg md:rounded-xl shadow-lg p-4 md:p-8 font-sans w-full">
       <h2 className="text-[color:var(--accent)] mb-4 font-bold text-lg md:text-xl tracking-wide">Owner Login</h2>
       <a
-        href={process.env.REACT_APP_BACKEND_URL ? `${process.env.REACT_APP_BACKEND_URL}/api/auth/google` : 'http://localhost:5000/api/auth/google'}
+        href={`${process.env.REACT_APP_BASE_URL}/api/auth/google`}
         className="btn w-full flex items-center justify-center gap-2 mb-4 bg-white text-[color:var(--accent)] border border-[color:var(--accent)] shadow-sm hover:bg-[color:var(--accent)] hover:text-white"
         style={{ fontWeight: 600 }}
         onClick={(e) => { createRipple(e); }}
